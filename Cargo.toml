@@ -1,0 +1,13 @@
+[package]
+name = "lux"
+version = "0.1.0"
+authors = ["Gwen Lofman <Gwen@Lofman.co>"]
+description = "A \"one weekend raytracer\" to learn some graphics and rust."
+repository = "github.com/Lionex/lux"
+readme = "README.md"
+keywords = ["raytracer","graphics"]
+license = "MIT"
+license-file = "LICENSE"
+
+
+[dependencies]
