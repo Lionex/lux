@@ -1,5 +1,11 @@
+# Cargo files
 target/
 **/*.rs.bk
 Cargo.lock
 target/
 **/*.rs.bk
+
+# Ray Tracer output
+result*.*
+[Rr]esult/
+[Rr]esults/
