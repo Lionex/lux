@@ -1,7 +1,7 @@
 use std::ops::{Add, Sub, Mul, Div};
 use std::convert::From;
 
-#[derive(PartialEq,Debug)]
+#[derive(Copy,Clone,PartialEq,Debug)]
 pub struct Vec3 {
     pub x: f64,
     pub y: f64,
@@ -9,6 +9,14 @@ pub struct Vec3 {
 }
 
 impl<'a> Vec3 {
+    pub fn unit() -> Vec3 {
+        Vec3 { x: 1., y: 1., z: 1., }
+    }
+
+    pub fn zero() -> Vec3 {
+        Vec3 {x: 0., y: 0., z: 0.}
+    }
+
     pub fn dot(&self, rhs: &Vec3) -> f64 {
         self.x * rhs.x + self.y * rhs.y + self.z * rhs.z
     }
@@ -19,10 +27,6 @@ impl<'a> Vec3 {
             y: self.x*rhs.z - self.z*rhs.x,
             z: self.x*rhs.y - self.y*rhs.x,
         }
-    }
-
-    pub fn unit(&self) -> Vec3 {
-        Vec3 { x: 1., y: 1., z: 1., }
     }
 
     pub fn magnitude(&self) -> f64 {
